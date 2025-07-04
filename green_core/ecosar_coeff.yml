@@ -1,1 +1,12 @@
-
+Alcohols:
+  a: -0.945   # eğim
+  b:  2.477   # kesişim
+Phenols:
+  a: -0.854
+  b:  1.925
+Amines:
+  a: -0.721
+  b:  2.102
+Esters:
+  a: -1.037
+  b:  3.624
