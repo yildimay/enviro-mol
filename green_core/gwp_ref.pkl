@@ -1,0 +1,7 @@
+gwp = {
+    "CF4":   {"alpha": 0.1,  "tau": 50000},
+    "C2F6":  {"alpha": 0.25, "tau": 10000},
+    "CFC-11":{"alpha": 0.25, "tau":  4000},
+    "HCFC-22":{"alpha": 0.19,"tau":    12},
+    # … ihtiyaç duyduğun kadar ekle
+}
