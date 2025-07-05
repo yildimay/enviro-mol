@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: enviro-mol                         # Panelde gözükecek ad
+    runtime: python                          # Buildpack: Python
+    pythonVersion: "3.10.14"                 # ← 3.10 wheels uyumlu
+    plan: free                               # (ya da standard, pro vs.)
+    buildCommand: pip install -r requirements.txt
+    startCommand: >
+      streamlit run app.py
+      --server.port $PORT
+      --server.address 0.0.0.0
+    envVars:                                 # Varsa gizli anahtarlar
+      - key: OPENAI_API_KEY
+        sync: false
+
+    # İsteğe bağlı: yalnızca belirli değişikliklerde yeniden inşa et
+    buildFilters:
+      - path: "green_core/**"
+      - path: "app.py"
+      - path: "requirements.txt"
