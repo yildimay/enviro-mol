@@ -27,9 +27,15 @@ import pickle
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List
+import yaml  # dosyanın başına
+
+def _yaml_load(path: Path):
+    with open(path, "r", encoding="utf-8") as fh:
+        return yaml.safe_load(fh)
 
 from rdkit import Chem
 from rdkit.Chem import Crippen, Descriptors
+
 
 # ---------------------------------------------------------------------------
 # Helper / utility functions
