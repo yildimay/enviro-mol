@@ -138,7 +138,7 @@ class GreenAssess:
     # 3. LC50 -------------------------------------------------------------
 
     def _lc50_score(self) -> float:
-        ecosar = _json_load(self.data_dir / "ecosar_coeff.yml")  # class → (a,b)
+        ecosar = _yaml_load(self.data_dir / "ecosar_coeff.yml")
         chem_class = self._assign_ecosar_class(ecosar.keys())
         a, b = ecosar[chem_class]
         logKow = self.descriptors["logKow"]
