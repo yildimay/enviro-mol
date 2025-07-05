@@ -133,7 +133,7 @@ class GreenAssess:
 
     # 4 | Atmosferik OH reaktivitesi
     def _oh_score(self) -> float:
-        group_k = _pickle_load(self.data_dir / "oh_groups.pkl")
+        group_k = _pickle_load(self.data_dir / "oh_groups.json")
         k_total = 0.0
         for smarts, k_i in group_k.items():
             patt = Chem.MolFromSmarts(smarts)
