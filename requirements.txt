@@ -1,7 +1,7 @@
-streamlit>=1.35.0
-plotly>=5.22.0
-pandas>=2.2.0
-numpy>=1.26.0
-rdkit-pypi==2023.9.5  
-PyYAML>=6.0           
-pickle5; python_version<'3.8'  
+streamlit
+plotly
+pandas
+numpy
+rdkit-pypi  
+PyYAML           
+pickle5 
