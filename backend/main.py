@@ -1,5 +1,6 @@
 # backend/main.py
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from green_core import GreenAssess
 
