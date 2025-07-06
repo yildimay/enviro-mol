@@ -1,21 +1,65 @@
-<!-- frontend/index.html -->
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Enviro-Mol</title>
-  <link rel="stylesheet" href="css/tailwind.min.css">
+  <meta charset="utf-8" />
+  <title>Enviro-Mol · Environmental Risk Calculator</title>
+
+  <!-- ▸ Lightweight, self-contained CSS (no Tailwind/CDN) -->
+  <style>
+    :root{
+      --bg:#f9fafb; --surface:#ffffff; --accent:#10b981; --accent-dark:#059669;
+      --text:#1f2937; --muted:#64748b; --radius:.5rem;
+    }
+    *{box-sizing:border-box;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+    body{margin:0;padding:2rem;display:flex;justify-content:center;background:var(--bg);color:var(--text)}
+    .card{width:100%;max-width:40rem;background:var(--surface);padding:2rem;border-radius:var(--radius);box-shadow:0 4px 24px rgba(0,0,0,.06)}
+    h1{margin-top:0;font-size:1.8rem}
+    input[type=text]{width:100%;padding:.7rem 1rem;font-size:1rem;border:1px solid #cbd5e1;border-radius:var(--radius)}
+    button{margin-top:1rem;padding:.65rem 1.4rem;font-size:1rem;border:none;border-radius:var(--radius);color:#fff;background:var(--accent);cursor:pointer;transition:background .15s}
+    button:hover{background:var(--accent-dark)}
+    table{width:100%;border-collapse:collapse;margin-top:1rem}
+    th,td{padding:.45rem .6rem;border:1px solid #e2e8f0;text-align:left;font-size:.95rem}
+    pre{white-space:pre-wrap;background:#f1f5f9;padding:1rem;border-radius:var(--radius);overflow-x:auto;font-size:.9rem;margin-top:1.5rem}
+    pre.error{color:#b91c1c}
+    /* fade-in */
+    .fade-enter{opacity:0;transform:translateY(-4px)}
+    .fade-enter-active{transition:all .25s ease-out;opacity:1;transform:none}
+  </style>
+
+  <!-- ▸ Plotly for gauge & radar charts -->
+  <script src="https://cdn.plot.ly/plotly-2.32.1.min.js"></script>
 </head>
-<body class="p-6 max-w-3xl mx-auto">
-  <h1 class="text-3xl font-semibold mb-4">Enviro-Mol – Environmental Risk Index</h1>
+<body>
+  <div class="card fade-enter" id="container">
+    <h1>Enviro-Mol <span style="font-size:.8rem;color:var(--muted)">demo</span></h1>
 
-  <form id="form" class="flex gap-2 mb-4">
-    <input id="smiles" class="border flex-1 p-2" placeholder="Enter SMILES…" />
-    <button class="bg-green-600 px-4 py-2 text-white">Assess</button>
-  </form>
+    <!-- ── Input form ─────────────────────────────────────────────── -->
+    <form id="form">
+      <input id="smiles" type="text" placeholder="Enter SMILES… e.g. CCO" autocomplete="off" />
+      <button type="submit">Assess</button>
+    </form>
 
-  <pre id="out" class="bg-gray-100 p-4 rounded"></pre>
+    <!-- ── Helper message / error placeholder ─────────────────────── -->
+    <pre id="out">ℹ️ Enter a SMILES string and hit <em>Assess</em>.</pre>
 
+    <!-- ── Result block (hidden until we have data) ───────────────── -->
+    <div id="result" style="display:none">
+      <h2>Scores</h2>
+      <table id="tbl"></table>
+
+      <h2 style="margin-top:1.5rem">ERI gauge</h2>
+      <div id="gauge" style="height:260px"></div>
+
+      <h2 style="margin-top:1.5rem">Radar</h2>
+      <div id="radar" style="height:320px"></div>
+    </div>
+  </div>
+
+  <!-- ▸ Behaviour -->
   <script src="app.js"></script>
+  <script>
+    // entrance fade once DOM loaded
+    requestAnimationFrame(()=>document.getElementById('container').classList.remove('fade-enter'));
+  </script>
 </body>
 </html>
