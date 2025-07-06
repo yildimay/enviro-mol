@@ -1,0 +1,21 @@
+<!-- frontend/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Enviro-Mol</title>
+  <link rel="stylesheet" href="css/tailwind.min.css">
+</head>
+<body class="p-6 max-w-3xl mx-auto">
+  <h1 class="text-3xl font-semibold mb-4">Enviro-Mol – Environmental Risk Index</h1>
+
+  <form id="form" class="flex gap-2 mb-4">
+    <input id="smiles" class="border flex-1 p-2" placeholder="Enter SMILES…" />
+    <button class="bg-green-600 px-4 py-2 text-white">Assess</button>
+  </form>
+
+  <pre id="out" class="bg-gray-100 p-4 rounded"></pre>
+
+  <script src="app.js"></script>
+</body>
+</html>
