@@ -1,8 +1,0 @@
-streamlit
-plotly
-pandas
-numpy
-rdkit
-PyYAML
-pytest
-
