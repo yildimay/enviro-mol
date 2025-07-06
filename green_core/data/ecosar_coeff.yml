@@ -1,12 +1,253 @@
 Alcohols:
-  a: -0.945   # eğim
-  b:  2.477   # kesişim
+  a: -0.945
+  b:  2.477
+  
 Phenols:
   a: -0.854
   b:  1.925
+
 Amines:
   a: -0.721
   b:  2.102
+
 Esters:
   a: -1.037
   b:  3.624
+
+AcidHalides:
+  a: -0.4869
+  b: -0.2329
+
+Acrylamides:
+  a: -0.5482
+  b: -0.482
+
+Acrylates:
+  a: -0.2434
+  b: -1.367
+
+AldehydesMono:      # 
+  a: -0.4776
+  b: -0.2601
+
+AldehydesPoly:      # 
+  a: -0.3531
+  b: -1.0143
+
+AliphaticAmines:    # 
+  a: -0.657
+  b:  0.5975
+
+AlkoxySilanes:          # Kabuk silan türevleri
+  a: -0.4507 
+  b: -0.7837
+
+Amides:                 # Amid sınıfı
+  a: -0.7804 
+  b:  1.0069
+
+AnilinesAminoMeta:      # m-Amino-anilin türevleri
+  a: -0.7985 
+  b:  1.0225
+#––– Aniline alt-sınıfları ––––––––––––––––––––––––––––––––––––––––––
+AnilinesAminoOrtho:      # Anilines, amino-ortho  
+  a: -0.6126
+  b: -0.292
+
+AnilinesAminoPara:       # Anilines, amino-para   
+  a: -0.1793
+  b: -3.3252
+
+AnilinesHindered:        # Anilines (hindered)    
+  a: -0.5846
+  b:  0.7949
+
+AnilinesUnhindered:      # Anilines (unhindered)  
+  a: -0.6528
+  b:  0.3385
+#––––––––– Aromatik & halkalı alt-sınıflar –––––––––––––––––––––––––––––
+Aziridines:              # 
+  a: -0.4563
+  b: -1.3856
+
+Benzodioxoles:           # 
+  a: -0.9586
+  b:  2.1738
+
+Benzotriazoles:          # 
+  a: -0.5928
+  b:  0.2253
+
+Benzoylcyclohexanediones:   # 
+  a: -0.6846
+  b:  0.643
+
+BenzylAlcohols:          # 
+  a: -0.8812
+  b:  1.2439
+
+BenzylHalides:           # 
+  a: -0.3193
+  b: -1.2938
+
+BenzylImides:            # 
+  a: -0.1242
+  b: -2.9345
+
+BenzylNitriles:          # 
+  a: -0.6169
+  b:  0.1903
+
+CarbamateEstersOxime:    # 
+  a: -0.4048
+  b: -1.6878
+
+CarbamateEstersPhenyl:   # 
+  a: -0.3478
+  b: -0.9147
+
+CarbamateEsters:          # 
+  a: -0.7294
+  b:  0.6028
+
+CarbonylUreas:            # 
+  a: -0.5869
+  b:  0.3214
+
+DiazoniumsAromatic:       # 
+  a: -0.1818
+  b: -2.5893
+
+Diketones:                # 
+  a: -0.595
+  b: -0.0081
+
+EpoxidesMono:             # 
+  a: -0.5459
+  b:  0.0922
+
+EstersDithiophosphate:    # 
+  a: -0.7054
+  b: -0.8052
+
+#––––– Fosfor / kükürt içeren ester alt-sınıfları ––––––––––––––––––
+EstersMonothiophosphate:      # 
+  a: -0.8543
+  b:  0.3979
+
+EstersPhosphateInert:         # 
+  a: -0.8122
+  b:  1.303
+
+EstersPhosphateWithdrawing:   # 
+  a: -0.2991
+  b: -1.4695
+
+EstersPhosphinates:           # 
+  a: -0.2515
+  b: -1.2318
+
+EstersGeneral:                # 
+  a: -0.6036
+  b:  0.2887
+
+#––––– Halojenli amid / asit / epoksit / ester / eter alt-sınıfları ––––––
+HaloAcetamides:               # 
+  a: -0.5558
+  b: -0.4112
+
+HaloAcids:                    # 
+  a: -0.8925
+  b:  1.7372
+
+HaloEpoxides:                 # 
+  a: -0.4477
+  b: -0.3135
+
+HaloEstersBeta:               # 
+  a: -0.1199
+  b: -2.1804
+
+HaloEthers:                   # 
+  a: -0.7847
+  b:  1.2396
+
+#––––– Halogen-türevli & hetero-halkalı sınıflar ––––––––––––––––––––––
+Haloimides:           # 
+  a: -0.205
+  b: -2.7842
+
+Haloketones:          # 
+  a: -0.0542
+  b: -3.025
+
+Halonitriles:         # 
+  a: -0.1643
+  b: -2.023
+
+Halopyridines:        # 
+  a: -0.2271
+  b: -1.5713
+
+#––––– Azot/oksijen içeren fonksiyonel gruplar ––––––––––––––––––––––––
+Hydrazines:           # 
+  a: -0.4157
+  b: -1.6622
+
+Hydroquinones:        # 
+  a: -0.2015
+  b: -2.6301
+
+Imides:               # 
+  a: -0.3871
+  b: -0.6902
+
+Isothiazolones:       # 
+  a: -0.5119
+  b: -1.9084
+
+KetoneAlcohols:       # 
+  a: -0.7037
+  b:  0.0603
+
+Malonitriles:         # 
+  a: -0.4861
+  b: -2.2341
+
+#––––– Heteroaromatik / özel pestisit alt-sınıfları –––––––––––––––––––
+Melamines:                 # 
+  a: -0.6078
+  b:  0.2592
+
+Methacrylates:             # 
+  a: -0.7140
+  b:  0.7762
+
+Neonicotinoids:            # 
+  a: -0.6732
+  b:  0.5859
+
+NereistoxinAnalogues:      # 
+  a: -0.0783
+  b: -2.6665
+
+NeutralOrganics:           # 
+  a: -0.8981
+  b:  1.7108
+
+Nicotinoids:               # 
+  a: -0.3140
+  b: -1.2102
+
+NitrileAlphaOH:            # 
+  a: -0.1628
+  b: -1.9658
+
+NitroAlcohols:             # 
+  a: -0.4803
+  b: -0.3785
+
+NitroNitrosoBenzamides:    # 
+  a: -0.6044
+  b:  0.2422
+
